@@ -2,12 +2,36 @@
     --main-color:#d3ad7f;
     --black:#13131a;
     --bg:#111111;
-    --border:.1rem solid rgba(255,255,255,.3);
+    --border:0.1rem solid rgba(255,255,255,.3);
     --p: #fff;
 }
+
 /* 1rem =10px */
 
+*{
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    margin: 0; border: none;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;  
+    /* Căn ngang theo trục x */
+}
+
+body{
+    width: 100%;
+    background: var(--bg);
+}
+
+section{
+    padding: 1.5rem 7%;
+}
+
+/*---------------------BREAKPOINTS-----------------------*/
 /* kích thước màn hình cho mobie < 74rem */
 @media only screen and (max-width: 73.9rem)  {
 
@@ -24,41 +48,17 @@
 
 }
 
+/*--------------------------------------------------------*/
 
-*{
-    font-family: 'Roboto', sans-serif;
-    text-decoration: none;
-    margin: 0; border: none;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 62.5%;
-    overflow-x: hidden;  
-    /* Căn ngang theo trục x */
-}
-
-
-body{
-    background: var(--bg);
-}
-
-section{
-    padding: 1.5rem 7%;
-}
-
-/* heading */
-
-/*----------------------------------*/
+/*------------------------HEADING--------------------------*/
 .heading{
     display: block;
     color: #fff;
-    font-size: 6rem;
+    font-size: 4.3rem;
     align-items: center;
     text-align: center;
-    height: 13rem;
-    line-height: 13rem;
+    height: 6.5rem;
+    line-height: 6.5rem;
     margin-bottom: 2rem;
     text-transform: uppercase;
 }
@@ -67,9 +67,9 @@ section{
     color: var(--main-color);
 }
 
-/*----------------------------------*/
+/*--------------------------------------------------------------*/
 
-
+/*-----------------------------HEADER---------------------------*/
 .header {
     justify-content: space-between;
     padding:1.5rem 7%;
@@ -80,25 +80,29 @@ section{
     position: fixed;
     top:0; left: 0; right: 0;
     z-index: 1000;
-    box-shadow: 0 0 0 2px #333333 !important;
+   
 }
 
 .header .navbar a {
     margin:0 1rem;
-    font-size: 1.6rem;
+    font-size: 2.2rem;
     color:#fff;
-    font-size: 24px;
+    
 }
 
 .header .navbar a:hover{
     color:var(--main-color);
-    border-bottom: .1rem solid var(--main-color);
-    padding-bottom: .5rem;
+    border-bottom:1px solid var(--main-color);
+    padding-bottom: 0.5rem;
 }
 
 .header img{  
-    height: 9.5rem;
+    height: 6.5rem;
 }
+
+.icons{
+    font-size: 2.5rem;
+ }
 
 .header .icons div{
     color:#fff;
@@ -117,7 +121,9 @@ section{
 #menu-button{
     display: none;
 }
+/*--------------------------------------------------------------*/
 
+/*---------------------------BUTTON-----------------------------*/
 .button{
     margin-top: 1rem;
     display: inline-block;
@@ -127,7 +133,9 @@ section{
     background: var(--main-color);
     cursor: pointer;
 }
+/*--------------------------------------------------------------*/
 
+/*----------------------------HOME------------------------------*/
 .home{
     min-height: 100vh;
     display: flex;
@@ -142,7 +150,7 @@ section{
 }
 
 .home .contents h3 {
-    font-size: 6rem;
+    font-size: 4.5rem;
     text-transform: uppercase;
     color:var(--p);
 }
@@ -153,17 +161,16 @@ section{
     padding: 1rem 0;
     font-size: 2rem ;  
 }
+/*--------------------------------------------------------------*/
 
-.icons{
-   font-size: 2.5rem;
-}
-
+/*------------------------------ABOUT---------------------------*/
 .about .row{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     background: var(--black);
 }
+
 /*  flex-grow   :1  tăng chiều ngang của phần tử con
     flex-shrink :1  theo nội dung giá trị phần tử khác
     flex-basis  :45 rem nó quyết định kích thước lý tưởng của phần tử
@@ -175,8 +182,8 @@ section{
     flex: 1 1 45rem;
 }
 .about .row .image img {
-    width: 85rem;
-    height: 65rem;
+    width: 65.5rem;
+    height: 54.5rem;
 }
 .row .contents {
     flex:1 1 45rem;
@@ -192,11 +199,14 @@ section{
 
 .about .contents p {
     color:#ccc;
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding: 1rem 0;
     line-height: 1.8;
 }
 
+/*--------------------------------------------------------------*/
+
+/*----------------------------MENU------------------------------*/
 .menu .box-container {
     display: grid;
     gap: 1.5rem;
@@ -216,26 +226,38 @@ section{
 
 }
 
+/*--------------------------------------------------------------*/
+
 /* grid-template-columns: repeat(auto-fill,minmax(100px,1fr)); 
     căn ngang đường viền lấp đầy khoảng trống
     gap: cách viền
 */
+
+/*---------------------------PRODUCTS---------------------------*/
 .products .box-container{
     display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(auto-fill,minmax(55rem,1fr));
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill,minmax(45rem,1fr));
 }
 
 .products .box-container .box{
     text-align: center;
     border:var(--border);
-    padding: 2rem;
+    padding: 1rem;
 }
 
+.products .contents p {
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: #ccc;
+}
+/*--------------------------------------------------------------*/
+
+/*---------------------------ALL BOX----------------------------*/
 .box img {
-    width: 53.5rem;
-    height: 44rem;
-    transition: all 5s;
+    width: 33.5rem;
+    height: 24rem;
+    
 }
 
 .box .contents h3 {
@@ -247,6 +269,23 @@ section{
 
 .box .contents p {
     margin-top: 3rem;
-    font-size: 3rem;
+    font-size: 2rem;
     color: #ccc;
 }
+
+/*------------------------------------------------------------*/
+
+
+/*----------------------------REVIEW--------------------------*/
+
+/*------------------------------------------------------------*/
+
+
+/*----------------------------CONTACTS-------------------------*/
+
+/*-------------------------------------------------------------*/
+
+
+/*-----------------------------BLOGS----------------------------*/
+
+/*--------------------------------------------------------------*/
