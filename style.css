@@ -210,7 +210,7 @@ section{
 .menu .box-container {
     display: grid;
     gap: 1.5rem;
-    grid-template-columns: repeat(auto-fill,minmax(55rem,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(35rem,1fr));
 
 }
 
@@ -237,7 +237,7 @@ section{
 .products .box-container{
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fill,minmax(45rem,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(35rem,1fr));
 }
 
 .products .box-container .box{
