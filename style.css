@@ -6,10 +6,13 @@
     --p: #fff;
 }
 
-/* 1rem =10px */
+/* 
+    1rem = 10px
+    1em  = 16px 
+*/
 
 *{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif, Arial;
     text-decoration: none;
     margin: 0; border: none;
     padding: 0;
@@ -17,13 +20,14 @@
 }
 
 html {
+    width: 100%;
     font-size: 62.5%;
     overflow-x: hidden;  
     /* Căn ngang theo trục x */
 }
 
 body{
-    width: 100%;
+    
     background: var(--bg);
 }
 
@@ -32,19 +36,35 @@ section{
 }
 
 /*---------------------BREAKPOINTS-----------------------*/
-/* kích thước màn hình cho mobie < 74rem */
-@media only screen and (max-width: 73.9rem)  {
 
+/* kích thước màn hình cho mobie < 740px / 16px= 46.25em */
+@media only screen and (max-width: 63.9375em)  {
+
+    .about {
+        display: block;
+    }
+    .about .image {
+        width: 100%;
+        
+    }
+    .about .contents {
+        flex: 1 1 25rem;
+    }
+    .about .contents h3 {
+        font-size: 1.4em;
+    }
+    .about .contents p {
+        font-size: 1em;
+    }
+}
+
+/* kích thước màn hình cho tablet width >= 46.25em and < 64em */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
     
 }
 
-/* kích thước màn hình cho tablet width > 74rem and < 102,4rem */
-@media only screen and (min-width: 74rem) and (max-width: 102.3rem) {
-    
-}
-
-/* kích thước màn hình cho lap, desktop > 102.4rem  */
-@media only screen and (min-width: 102.41rem){
+/* kích thước màn hình cho lap, desktop >= 64em  */
+@media only screen and (min-width: 64em){
 
 }
 
@@ -96,7 +116,8 @@ section{
     padding-bottom: 0.5rem;
 }
 
-.header img{  
+.header img{ 
+    width: 100%; 
     height: 6.5rem;
 }
 
@@ -171,25 +192,30 @@ section{
     background: var(--black);
 }
 
-/*  flex-grow   :1  tăng chiều ngang của phần tử con
+/*  
+    flex-grap   : tự động xuống dòng 
+    flex-grow   :1  tăng chiều ngang của phần tử con
     flex-shrink :1  theo nội dung giá trị phần tử khác
     flex-basis  :45 rem nó quyết định kích thước lý tưởng của phần tử
                     không thể thay đổi vượt qua lớp cha
 */
 
-/*images text blocks*/
+/*--------------------images text blocks------------------------*/
+
 .about .row .image {
     flex: 1 1 45rem;
 }
+
 .about .row .image img {
-    width: 65.5rem;
-    height: 54.5rem;
+    width: 100%;
+    height: 100%;
 }
+
 .row .contents {
     flex:1 1 45rem;
     padding:2rem;
     background-color: #333333;
-   
+
 }
 
 .row .contents h3 {
@@ -228,7 +254,8 @@ section{
 
 /*--------------------------------------------------------------*/
 
-/* grid-template-columns: repeat(auto-fill,minmax(100px,1fr)); 
+/*  a card layout using CSS Grid Layout
+    grid-template-columns: repeat(auto-fill,minmax(100px,1fr)); 
     căn ngang đường viền lấp đầy khoảng trống
     gap: cách viền
 */
@@ -243,7 +270,7 @@ section{
 .products .box-container .box{
     text-align: center;
     border:var(--border);
-    padding: 1rem;
+    padding:2rem;
 }
 
 .products .contents p {
@@ -255,8 +282,8 @@ section{
 
 /*---------------------------ALL BOX----------------------------*/
 .box img {
-    width: 33.5rem;
-    height: 24rem;
+    width: 100%;
+    height: 30rem;
     
 }
 
