@@ -1,8 +1,9 @@
+/* Tạ0 mã giả để gọi function */
 :root{
     --main-color:#d3ad7f;
-    --black:#13131a;
+    --black:#1C1C1C;
     --bg:#111111;
-    --border:0.1rem solid rgba(255,255,255,.3);
+    --border:0.1rem solid #333333;
     --p: #fff;
 }
 
@@ -27,7 +28,6 @@ html {
 }
 
 body{
-    
     background: var(--bg);
 }
 
@@ -37,7 +37,7 @@ section{
 
 /*---------------------BREAKPOINTS-----------------------*/
 
-/* kích thước màn hình cho mobie < 740px / 16px= 46.25em */
+/* kích thước màn hình cho mobie, tablet < 740px / 16px= 46.25em */
 @media only screen and (max-width: 63.9375em)  {
 
     .about {
@@ -56,11 +56,6 @@ section{
     .about .contents p {
         font-size: 1em;
     }
-}
-
-/* kích thước màn hình cho tablet width >= 46.25em and < 64em */
-@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
-    
 }
 
 /* kích thước màn hình cho lap, desktop >= 64em  */
@@ -121,11 +116,8 @@ section{
     height: 6.5rem;
 }
 
-.icons{
-    font-size: 2.5rem;
- }
-
 .header .icons div{
+    font-size: 2.5rem;
     color:#fff;
     cursor: pointer;
     font-size: 2.5rem;
@@ -145,7 +137,7 @@ section{
 /*--------------------------------------------------------------*/
 
 /*---------------------------BUTTON-----------------------------*/
-.button{
+ .button{
     margin-top: 1rem;
     display: inline-block;
     padding:.9rem 3rem;
@@ -208,26 +200,25 @@ section{
 
 .about .row .image img {
     width: 100%;
-    height: 100%;
 }
 
 .row .contents {
     flex:1 1 45rem;
     padding:2rem;
     background-color: #333333;
-
+    width: 100%;
 }
 
 .row .contents h3 {
-    font-size: 5rem;
+    font-size: 4.5rem;
     color:#fff;
 }
 
 .about .contents p {
     color:#ccc;
-    font-size: 2rem;
+    font-size: 1.6rem;
     padding: 1rem 0;
-    line-height: 1.8;
+    line-height: 1.6;
 }
 
 /*--------------------------------------------------------------*/
@@ -243,7 +234,7 @@ section{
 .menu .box {
     text-align: center;
     border:var(--border);
-    padding: 2rem;
+    padding: 5rem;
 }
 
 .menu .box span {
@@ -267,7 +258,7 @@ section{
     grid-template-columns: repeat(auto-fill,minmax(35rem,1fr));
 }
 
-.products .box-container .box{
+.products .box-container .box {
     text-align: center;
     border:var(--border);
     padding:2rem;
@@ -283,7 +274,7 @@ section{
 /*---------------------------ALL BOX----------------------------*/
 .box img {
     width: 100%;
-    height: 30rem;
+    height: 26rem;
     
 }
 
@@ -304,6 +295,35 @@ section{
 
 
 /*----------------------------REVIEW--------------------------*/
+.review .box-container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill,minmax(35rem,1fr));
+}
+
+.review .box-container .box{
+    border:var(--border);
+    text-align: center;
+    padding:3rem 2.5rem;
+}
+
+.review .box-container .box .user{
+    margin-top: 3rem;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.review .box-container .box h3{
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-top: 2rem;
+}
+.review .box-container .box p {
+    font-size: 2rem;
+    color: #fff;
+}
+
 
 /*------------------------------------------------------------*/
 
@@ -316,3 +336,28 @@ section{
 /*-----------------------------BLOGS----------------------------*/
 
 /*--------------------------------------------------------------*/
+
+
+.footer {
+    display: block;
+    align-items: center;
+    text-align: center;
+    background-color:var(--black) ;
+    height: 8rem;
+    line-height: 5.5rem;
+    font-size: 2.5rem;
+    color: #333333;
+}
+  
+/* hover scale zoom out images */
+.menu .images {
+    overflow: hidden;
+    max-width: 100%;
+    transition: all 5s;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+}
+.menu .images:hover img {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+}
