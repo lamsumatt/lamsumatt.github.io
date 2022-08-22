@@ -128,16 +128,11 @@ section{
     color:var(--main-color);
 }
 
-.header .search-form{
-    display: none;
-}
-#menu-button{
-    display: none;
-}
+
 /*--------------------------------------------------------------*/
 
 /*---------------------------BUTTON-----------------------------*/
- .button{
+.button{
     margin-top: 1rem;
     display: inline-block;
     padding:.9rem 3rem;
@@ -146,6 +141,7 @@ section{
     background: var(--main-color);
     cursor: pointer;
 }
+
 /*--------------------------------------------------------------*/
 
 /*----------------------------HOME------------------------------*/
@@ -227,7 +223,7 @@ section{
 .menu .box-container {
     display: grid;
     gap: 1.5rem;
-    grid-template-columns: repeat(auto-fill,minmax(35rem,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(35rem,1fr));
 
 }
 
@@ -246,7 +242,8 @@ section{
 /*--------------------------------------------------------------*/
 
 /*  a card layout using CSS Grid Layout
-    grid-template-columns: repeat(auto-fill,minmax(100px,1fr)); 
+    grid-template-columns: repeat(auto-fit,minmax(35rem,1fr)); 
+    auto-fit: chiếm hết khoảng trống trong cột
     căn ngang đường viền lấp đầy khoảng trống
     gap: cách viền
 */
@@ -255,7 +252,7 @@ section{
 .products .box-container{
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fill,minmax(35rem,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(35rem,1fr));
 }
 
 .products .box-container .box {
@@ -298,7 +295,7 @@ section{
 .review .box-container {
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fill,minmax(35rem,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(35rem,1fr));
 }
 
 .review .box-container .box{
@@ -329,11 +326,58 @@ section{
 
 
 /*----------------------------CONTACTS-------------------------*/
+.contact .row {
+    background: var(--black);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.container {
+    flex:1 1 45rem;
+    padding:2rem;
+    background-color: #333333;
+    width: 100%;
+}
+
+.container .item{
+    margin-left: 2rem ;
+    width: 93%;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    height: 5rem;
+    border: var(--border);
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+.container .button{
+    font-size: 1.8rem;
+    padding: 1rem 3.5rem;
+    border-radius: 0.5rem;
+    margin-left: 2rem;
+    margin-top: 0.3rem;
+}
+.contact .row .iframe {
+   flex: 1 1 45rem;
+}
+.contact .row .iframe iframe{
+    width: 100%;
+ }
 
 /*-------------------------------------------------------------*/
 
-
 /*-----------------------------BLOGS----------------------------*/
+.blogs .box-container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill,minmax(35rem,1fr));
+}
+
+.blogs .box-container .box{
+    border:var(--border);
+    text-align: center;
+    padding:3rem 2.5rem;
+}
 
 /*--------------------------------------------------------------*/
 
