@@ -1,3 +1,3 @@
 alert(
-    "Chào mừng mọi người đến với shop của mình ^^"
+    "Welcome to Coffee and Bean"
 )
