@@ -1,4 +1,4 @@
-/* Tạ0 mã giả để gọi function */
+/* Tạo mã giả để gọi function */
 :root{
     --main-color:#d3ad7f;
     --black:#1C1C1C;
@@ -181,7 +181,7 @@ section{
 }
 
 /*  
-    flex-grap   : tự động xuống dòng 
+    flex-wrap   : tự động xuống dòng 
     flex-grow   :1  tăng chiều ngang của phần tử con
     flex-shrink :1  theo nội dung giá trị phần tử khác
     flex-basis  :45 rem nó quyết định kích thước lý tưởng của phần tử
@@ -341,13 +341,13 @@ section{
 
 .container .item{
     margin-left: 2rem ;
-    width: 93%;
+    width: 94%;
     padding: 2rem;
     margin-bottom: 1.5rem;
     height: 5rem;
     border: var(--border);
     font-size: 2rem;
-    cursor: pointer;
+    cursor: text;
     border-radius: 1rem;
 }
 .container .button{
@@ -395,9 +395,10 @@ section{
   
 /* hover scale zoom out images */
 .menu .images {
+    position: relative;
     overflow: hidden;
-    max-width: 100%;
-    transition: all 5s;
+    width: 100%;
+    transition: all 1s;
     -webkit-transform: scale(1);
             transform: scale(1);
 }
