@@ -16,6 +16,7 @@
     margin: 0; border: none;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
 }
 
 html {
@@ -160,7 +161,7 @@ section{
 }
 
 .home .contents {
-    max-width: 60rem;
+    max-width: 52rem;
 }
 
 .home .contents h3 {
@@ -246,6 +247,7 @@ section{
 .menu .box .button{
     font-size: 2rem;
     color: var(--p);
+    transform: translateZ(0);
 }
 .menu .box .button:hover{
     background-color: var(--bg);
@@ -373,7 +375,6 @@ section{
 .container {
     flex:1 1 45rem;
     padding:2rem;
-    
     width: 100%;
 }
 
@@ -446,21 +447,24 @@ section{
     color: #fff;
     border: 0.2rem solid #333333;
     border-radius: 2.2rem;
-    margin-bottom: 1rem;
+
 }
 .footer .icons i:hover{
     color: var(--main-color);
     cursor: pointer;
 }
-.footer .navbar a{
-    text-decoration: none;
-    margin: 0 1rem;
-    font-size: 2.2rem;
-    color: #fff;
-    border: 0.2rem solid #333;
+.footer .row {
+    margin-top: 3rem;
+    color: var(--bg);
 }
-.footer .navbar a:hover{
-    background-color: var(--main-color);
+.row-contents a{
+    color: var(--bg);
+}
+.row-contents a:hover{
+    color: var(--main-color);
+    border-bottom: 0.2rem solid #FF9900;
+
 }
 
-/* hover scale zoom out images */
+
+
