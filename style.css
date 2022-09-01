@@ -366,7 +366,9 @@ section{
 /*----------------------------CONTACTS-------------------------*/
 .contact .row {
     object-fit: cover;
+    object-position: center;
     background-size: cover;
+    background-position: center;
     background: url(images/bgcontacts.webp) no-repeat;
     display: flex;
     flex-wrap: wrap;
