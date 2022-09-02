@@ -449,7 +449,7 @@ section{
     color: #fff;
     border: 0.2rem solid #333333;
     border-radius: 2.2rem;
-
+    
 }
 .footer .icons i:hover{
     color: var(--main-color);
@@ -467,6 +467,10 @@ section{
     border-bottom: 0.2rem solid #FF9900;
 
 }
+.footer .contents span{
+    color: var(--main-color);
+}
+
 
 
 
